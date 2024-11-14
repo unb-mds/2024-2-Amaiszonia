@@ -18,7 +18,7 @@ O objetivo principal do projeto é criar uma plataforma que permita aos cidadão
 | Gulherme D'Ávila               |      [@GuilhermeDavila](https://github.com/GuilhermeDavila)                |
 | Kaio Macedo                    | [@bigkaio](https://github.com/bigkaio)                                     |
 | Renan Pariz                    |        [@renanpariiz](https://github.com/renanpariiz)                      |
-| Wallysson Souza                |         [@devwallyson](https://github.com/devwallyson)                     |
+| Wallyson Souza                |         [@devwallyson](https://github.com/devwallyson)                     |
 
 ## 📚 Documentação
 
