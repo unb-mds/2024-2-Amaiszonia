@@ -9,7 +9,7 @@ O [Portal A+zonia](https://github.com/unb-mds/2024-2-Squad10/) é um projeto da 
 
 O objetivo principal do projeto é criar uma plataforma que permita aos cidadãos e especialistas monitorar os compromissos ambientais dos municípios da Amazônia Legal, acompanhando políticas voltadas para preservação, reflorestamento e iniciativas sustentáveis. O portal proporcionará uma interface amigável para visualizar dados de políticas e compromissos, monitorando o progresso das metas de sustentabilidade e apresentando alertas sobre novas iniciativas.
 
-## 👥 [Equipe]()
+## 👥 Equipe
 
 | Nome                           |                           GitHub                                           |
 | :----------------------------- | :-------------------------------------------------------------------------:|
@@ -19,3 +19,7 @@ O objetivo principal do projeto é criar uma plataforma que permita aos cidadão
 | Kaio Macedo                    | [@bigkaio](https://github.com/bigkaio)                                     |
 | Renan Pariz                    |        [@renanpariiz](https://github.com/renanpariiz)                      |
 | Wallysson Souza                |         [@devwallyson](https://github.com/devwallyson)                     |
+
+## 📚 Documentação
+
+Você pode encontrar a documentação do projeto clicando [aqui](https://unb-mds.github.io/2024-2-Squad10/).
