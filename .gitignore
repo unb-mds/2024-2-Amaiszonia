@@ -1,0 +1,6 @@
+# mkdocs documentation
+/site
+
+# Next
+.next/
+/out/
