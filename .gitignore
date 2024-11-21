@@ -1,5 +1,5 @@
 # mkdocs documentation
-/site/*
+/site/
 # Next
 /frontend/.next/*
 /frontend/node_modules/*
