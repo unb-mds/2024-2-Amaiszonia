@@ -1,6 +1,6 @@
 # mkdocs documentation
-/site
-
+/site/*
 # Next
-.next/
-/out/
+/frontend/.next/*
+/frontend/node_modules/*
+/out

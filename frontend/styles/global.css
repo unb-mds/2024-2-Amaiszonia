@@ -1,0 +1,31 @@
+ul, li {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+body {
+    background-image: url('../public/bg.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    height: 100;
+    margin: 0;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../public/bg.jpg'); /* Mesma imagem de fundo */
+    background-size: cover;
+    background-position: center center;
+    filter: blur(8px); /* Aplica o desfoque, ajuste o valor conforme necessário */
+    z-index: -1; /* Coloca a camada atrás do conteúdo */
+}
+
+#main-bg {
+    background-color: darkgray;
+}
