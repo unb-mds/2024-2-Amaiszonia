@@ -18,10 +18,16 @@ O objetivo principal do projeto é criar uma plataforma que permita aos cidadão
 | Gulherme D'Ávila               |      [@GuilhermeDavila](https://github.com/GuilhermeDavila)                |
 | Kaio Macedo                    | [@bigkaio](https://github.com/bigkaio)                                     |
 | Renan Pariz                    |        [@renanpariiz](https://github.com/renanpariiz)                      |
-| Wallyson Souza                |         [@devwallyson](https://github.com/devwallyson)                     |
+| Wallyson Souza                 |         [@devwallyson](https://github.com/devwallyson)                     |
 
 ## 📚 Documentação
 
-Você pode encontrar a documentação do projeto clicando [aqui](https://unb-mds.github.io/2024-2-Squad10/).
+- Você pode encontrar a documentação do projeto clicando [aqui](https://unb-mds.github.io/2024-2-Squad10/).
 
-Você pode encontrar a arquitetura do projeto clicando [aqui](https://www.figma.com/design/Qwr0wSu0u54PdgBDXFdI1A/Protótipo-de-Arquitetura)
+## 📌 Extras
+
+### Arquitetura
+- Você pode encontrar a arquitetura do projeto clicando [aqui](https://www.figma.com/design/Qwr0wSu0u54PdgBDXFdI1A/Protótipo-de-Arquitetura)
+
+### Story Map
+- Você pode encontrar o Story Map do projeto clicando [aqui](https://miro.com/app/board/uXjVL_FNLfk=/)
