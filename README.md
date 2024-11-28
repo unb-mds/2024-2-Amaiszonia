@@ -11,14 +11,9 @@ O objetivo principal do projeto é criar uma plataforma que permita aos cidadão
 
 ## 👥 Equipe
 
-| Nome                           |                           GitHub                                           |
-| :----------------------------- | :-------------------------------------------------------------------------:|
-| Diogo Ferreira                 |        [@fdiogo1](https://github.com/fdiogo1)                              |
-| Guilherme Oliveira             |        [@GuilhermeOliveira1327](https://github.com/GuilhermeOliveira1327)  |
-| Gulherme D'Ávila               |      [@GuilhermeDavila](https://github.com/GuilhermeDavila)                |
-| Kaio Macedo                    | [@bigkaio](https://github.com/bigkaio)                                     |
-| Renan Pariz                    |        [@renanpariiz](https://github.com/renanpariiz)                      |
-| Wallyson Souza                 |         [@devwallyson](https://github.com/devwallyson)                     |
+| [<img src="https://avatars.githubusercontent.com/fdiogo1" width="100" height="100">](https://github.com/fdiogo1)<br>Diogo Ferreira | [<img src="https://avatars.githubusercontent.com/GuilhermeOliveira1327" width="100" height="100">](https://github.com/GuilhermeOliveira1327)<br>Guilherme Oliveira | [<img src="https://avatars.githubusercontent.com/GuilhermeDavila" width="100" height="100">](https://github.com/GuilhermeDavila)<br>Guilherme D'Ávila |
+| :----------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------: |
+| [<img src="https://avatars.githubusercontent.com/bigkaio" width="100" height="100">](https://github.com/bigkaio)<br>Kaio Macedo | [<img src="https://avatars.githubusercontent.com/renanpariiz" width="100" height="100">](https://github.com/renanpariiz)<br>Renan Pariz | [<img src="https://avatars.githubusercontent.com/devwallyson" width="100" height="100">](https://github.com/devwallyson)<br>Wallyson Souza |
 
 ## 📚 Documentação
 
