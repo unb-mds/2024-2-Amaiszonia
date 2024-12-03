@@ -1,5 +1,6 @@
 # mkdocs documentation
 site/
+
 # Next
 /frontend/.next/*
 /frontend/node_modules/*
@@ -9,3 +10,9 @@ site/
 .env
 __pycache__/
 db.sqlite3
+
+# Docker
+*.env
+
+# VSCode
+.vscode/
