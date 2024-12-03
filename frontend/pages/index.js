@@ -9,13 +9,13 @@ function Home() {
             <Head>
                 <meta charSet="utf-8"/>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
-                <title>Portal A+zônia - Home</title>
+                <title>Portal A+zônia - Início</title>
             </Head>
             <main className="container mt-5">
                 <img src="logo2.png" id="logo-image" className="rounded mx-auto d-block mb-4" height="105" width="180"/>
                 <h1 className="text-center text-white">Portal A+zônia</h1>
                 <p className='text-center text-white fw-bold'>O <b>Portal A+zonia</b> é um projeto da matéria 
-                    Métodos de Desenvolvimento de Software, ministrada na <b>Universidade de Brasília</b>.</p>
+                    Métodos de Desenvolvimento de Software 2024-2, ministrada na <b>Universidade de Brasília</b>.</p>
                 <h3 className="text-center text-white">Métodos de Desenvolvimento de Software</h3>
                 <p className='text-center text-white'><b>Universidade de Brasília</b></p>
                 <ul className="text-center text-white">
