@@ -29,3 +29,10 @@ body::before {
 #main-bg {
     background-color: darkgray;
 }
+
+.chart-container {
+    width: 200%; /* ou qualquer valor desejado, como 500px */
+    height: 200px; /* Defina a altura conforme necessário */
+    margin: 0 auto; /* Para centralizar o gráfico */
+  }
+  
