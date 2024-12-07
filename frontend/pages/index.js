@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import Link from 'next/link'
+import Link from 'next/Link'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 function Home() {
@@ -21,6 +21,7 @@ function Home() {
                 <ul className="text-center text-white">
                     <li className='mb-0'><Link href='https://github.com/unb-mds/2024-2-Squad10' className='text-white fw-bold' target='_blank'>GitHub</Link></li>
                     <li className='mb-0 text-primary'><Link href='https://unb-mds.github.io/2024-2-Squad10' className='text-white fw-bold' target='_blank'>GitPage</Link></li>
+                    <li className='mb-0 text-primary'><Link href='/dados' className='text-white fw-bold' target='_blank'>Dados</Link></li>
                 </ul>
             </main>
         </div>
