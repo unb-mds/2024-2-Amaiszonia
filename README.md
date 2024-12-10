@@ -15,6 +15,13 @@ O objetivo principal do projeto é criar uma plataforma que permita aos cidadão
 | :----------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------: |
 | [<img src="https://avatars.githubusercontent.com/bigkaio" width="100" height="100">](https://github.com/bigkaio)<br>Kaio Macedo | [<img src="https://avatars.githubusercontent.com/renanpariiz" width="100" height="100">](https://github.com/renanpariiz)<br>Renan Pariz | [<img src="https://avatars.githubusercontent.com/devwallyson" width="100" height="100">](https://github.com/devwallyson)<br>Wallyson Souza |
 
+## 💻 Tecnologias utilizadas
+
+- **Linguagens de Programação:** Python,Next e JavaScript
+- **Prototipação:** Figma
+- **Framework:** Django
+- **Banco de dados:** Json/csv
+
 ## 📚 Documentação
 
 - Você pode encontrar a documentação do projeto clicando [aqui](https://unb-mds.github.io/2024-2-Amaiszonia/).
