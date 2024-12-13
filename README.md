@@ -17,10 +17,10 @@ O objetivo principal do projeto é criar uma plataforma que facilite o acesso da
 
 ## 💻 Tecnologias utilizadas
 
-- **Linguagens de Programação:** Python,Next e JavaScript
+- **Linguagens de Programação:** Python,Next e Node.js
 - **Prototipação:** Figma
-- **Framework:** Django
-- **Banco de dados:** Json/csv
+- **Framework:** Django, Django Rest
+- **Banco de dados:** Json/csv, SQlite
 
 ## 📚 Documentação
 
