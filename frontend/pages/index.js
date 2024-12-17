@@ -21,7 +21,7 @@ function Home() {
                     <h1 className='text-center'>Bem-vindo (a) ao <b>Portal A+zônia!</b></h1>
                     <hr></hr>
                     <p>O Portal A+zônia foi criado com o objetivo de ficar por dentro de índices de queimada dos munícipios da <b>Amazonia Legal</b>!</p>
-                    <p >Este projeto faz parte da matéria <b><Link className='text-black' href='https://mds.lappis.rocks' target='_blank'>Métodos de Desenvolvimento de Sistemas</Link></b>.</p>
+                    <p >Este projeto faz parte da matéria <b><Link className='text-black' href='https://mds.lappis.rocks' target='_blank'>Métodos de Desenvolvimento de Software</Link></b>.</p>
                     <hr></hr>
                 </div>
 
