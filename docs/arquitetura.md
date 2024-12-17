@@ -1,5 +1,3 @@
---
-
 # Arquitetura do Sistema - Amaiszonia
 
 ## Introdução

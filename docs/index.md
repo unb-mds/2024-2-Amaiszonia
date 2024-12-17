@@ -1,10 +1,4 @@
----
-hide:
-  - navigation
----
-
 # Portal A+zonia
-
 
 ## Sobre
 
@@ -48,6 +42,3 @@ O objetivo principal do projeto é criar uma plataforma que permita aos cidadão
             Wallyson Souza
             <br/>
             <img src="https://github.com/devwallyson.png" alt="Foto Wallysson Souza" width="130px" height="50%" style="border-radius:50%"/>
-        </div>
-    </div>
-</div>
