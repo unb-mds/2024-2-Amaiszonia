@@ -16,7 +16,8 @@ services:
     ports:
       - "3000:3000"
     volumes:
-      - ./frontend:/app
+      - ./frontend:/app  # Monta o código fonte
+      - /app/node_modules  # Mantém node_modules do contêiner
     stdin_open: true
     tty: true
     command: npm run dev
