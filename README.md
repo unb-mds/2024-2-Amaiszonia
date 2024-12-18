@@ -32,7 +32,7 @@ O objetivo principal do projeto é criar uma plataforma que facilite o acesso da
 - Você pode encontrar a arquitetura do projeto clicando [aqui](https://www.figma.com/design/Qwr0wSu0u54PdgBDXFdI1A/Protótipo-de-Arquitetura)
 
 ### Story Map
-- Você pode encontrar o Story Map do projeto clicando [aqui](https://miro.com/welcomeonboard/WStDb05BRWxVdUlOYW8xRzY3VGFmK0kvRG1FejVYRnE4czJqdHlDazBGNFkvMVBLMDZ6RXQxemdSNEkweU5TZmRyYTRISGIvbVc0ei93ZkVuWG9QYkFpNW85clp5MjdFNmRHNTkyM1pBS0ZxZjk4ZittV0srcGVHZ2lKU2VnNnUhZQ==?share_link_id=264935377729)
+- Você pode encontrar o Story Map do projeto clicando [aqui](https://miro.com/app/board/uXjVL_FNLfk=/)
 
 ### Protótipo 
 - Você pode encontrar o Protótipo do projeto clicando [aqui](https://www.figma.com/proto/fctzH8zN5fNSi8kJrPfdjB/Pr%C3%B3totipo?node-id=8-2&node-type=canvas&t=InQMkgO6EkkmNqLR-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=8%3A2)
