@@ -1,15 +1,20 @@
-# Arquitetura do Sistema - Amaiszonia
+# Arquitetura do Sistema - A+zônia
 
 ## Introdução
 
-O **Amaiszonia** é uma plataforma que permite aos usuários monitorar os compromissos ambientais dos municípios da Amazônia Legal, acompanhando políticas relacionadas à preservação, reflorestamento e iniciativas sustentáveis. O portal oferece uma interface amigável para visualizar dados sobre políticas e compromissos, monitorar o progresso das metas de sustentabilidade e apresentar alertas sobre novas iniciativas. Este documento apresenta a arquitetura do sistema, detalhando os componentes e a interação entre eles.
+
+**A+zônia** é uma plataforma que busca facilitar o acesso da população a dados atualizados sobre desmatamento e queimadas na Amazônia Legal. Com uma interface intuitiva, promove a conscientização ambiental ao apresentar informações relevantes de forma prática e acessível, incentivando o monitoramento e a divulgação de questões cruciais para a preservação da região.
 
 ## Diagrama de Arquitetura
 
-![Diagrama de Arquitetura](images/diagrama-arquitetura.png)
+<iframe
+  src="https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/design/Qwr0wSu0u54PdgBDXFdI1A/Protótipo-de-Arquitetura"
+  width="800"
+  height="600"
+  style="border: none;"
+  allowfullscreen
+></iframe>
 
-
----
 
 ## Principais Componentes
 
