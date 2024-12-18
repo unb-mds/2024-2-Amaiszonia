@@ -4,7 +4,7 @@
 
 O [Portal A+zonia](https://github.com/unb-mds/2024-2-Squad10/) é um projeto da matéria **Métodos de Desenvolvimento de Software**, ministrada na **Universidade de Brasília** pela professora Carla Rocha ([@RochaCarla](https://github.com/RochaCarla)).
 
-O objetivo principal do projeto é criar uma plataforma que permita aos cidadãos e especialistas monitorar os compromissos ambientais dos municípios da Amazônia Legal, acompanhando políticas voltadas para preservação, reflorestamento e iniciativas sustentáveis. O portal proporcionará uma interface amigável para visualizar dados de políticas e compromissos, monitorando o progresso das metas de sustentabilidade e apresentando alertas sobre novas iniciativas.
+O objetivo principal do projeto é criar uma plataforma que facilite o acesso da população a dados atualizados sobre a situação da Amazônia Legal, com foco no desmatamento e nas queimadas. A plataforma oferecerá uma interface intuitiva para visualizar informações relevantes, promovendo maior conscientização e entendimento das questões ambientais atuais, e contribuindo para o monitoramento e a divulgação desses dados de forma acessível e prática.
 
 ## Equipe
 

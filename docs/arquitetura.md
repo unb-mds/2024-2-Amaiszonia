@@ -6,7 +6,8 @@ O **Amaiszonia** é uma plataforma que permite aos usuários monitorar os compro
 
 ## Diagrama de Arquitetura
 
-![image protótipo]()
+![Diagrama de Arquitetura](images/diagrama-arquitetura.png)
+
 
 ---
 
