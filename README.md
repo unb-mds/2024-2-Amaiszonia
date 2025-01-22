@@ -22,7 +22,7 @@ O objetivo principal do projeto é criar uma plataforma que facilite o acesso da
 - **Framework:** Django, Django Rest
 - **Banco de dados:** Json/csv, SQlite
 
-  ## Clonar o Repositório
+## Clonar o Repositório
 
 Para clonar o repositório do projeto, utilize o seguinte comando:
 
@@ -35,6 +35,14 @@ Para rodar o projeto, você precisará das seguintes dependências:
 
 - **Python**: v3.10.12 (ou superior)
 - **Pip**: v22.0.2 (ou superior)
+
+#### Bibliotecas
+
+- **Streamlit**: v1.34.0
+- **Streamlit-Extras**: v0.4.3
+- **Pandas**: v2.2.2 (ou superior)
+- **Plotly Express**: v0.4.1 (ou superior)
+- **Plotly**: v5.22.0 (ou superior)
 
 ## 📚 Documentação
 
