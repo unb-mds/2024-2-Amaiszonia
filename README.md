@@ -29,6 +29,12 @@ Para clonar o repositório do projeto, utilize o seguinte comando:
 ```bash
 git clone https://github.com/unb-mds/2024-2-Amaiszonia.git
 ```
+## Dependências do Projeto
+
+Para rodar o projeto, você precisará das seguintes dependências:
+
+- **Python**: v3.10.12 (ou superior)
+- **Pip**: v22.0.2 (ou superior)
 
 ## 📚 Documentação
 
