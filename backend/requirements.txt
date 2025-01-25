@@ -1,5 +1,0 @@
-Django==4.2.17
-djangorestframework==3.14.0
-pandas==2.1.0
-python-dateutil==2.8.2
-django-cors-headers==4.6.0
