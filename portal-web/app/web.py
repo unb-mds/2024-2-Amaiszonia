@@ -62,7 +62,7 @@ selected = option_menu(
 )
 
 if selected == "Início":
-    # Mapa da AL
+    # Mapa da Amazonia Legal
     st.markdown("""
             <h2>Amazônia Legal </h2>
             <h4>O mapa abaixo destaca os estados que fazem parte da Amazônia Legal. </h4>    
