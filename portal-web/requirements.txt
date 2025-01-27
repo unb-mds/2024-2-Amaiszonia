@@ -1,3 +1,4 @@
 streamlit
 pandas
 watchdog
+streamlit-option-menu
