@@ -2,7 +2,6 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 
-# Configuração da página
 st.set_page_config(page_title="Portal A+zônia", layout="wide")
 
 # Estados da Amazônia Legal
@@ -24,12 +23,31 @@ coordenadas_estados = {
 }
 
 # Seção: Início
-st.markdown("# Início")
+st.markdown("""
+    <h1> Portal A+zônia </h1>         
+""", unsafe_allow_html=True)
+
+st.markdown("""
+    <h3> O <a href="https://github.com/unb-mds/2024-2-Squad10/">Portal A+zonia</a> é um projeto que visa monitorar dados ambientais referentes aos estados da Amazônia Legal. </h3>
+
+""", unsafe_allow_html=True)
+
+
 # filtro pra filtrar por estados 
 estado_selecionado = st.sidebar.selectbox(
     "Selecione o estado para consulta:",
     estados_amazonia
 )
+
+# Dados - Emissão CO2 Per Capita
+dadosCO2 = pd.read_csv('../data/dados_emissao_co2_perCapita.csv')
+dadosCO2_frame = pd.DataFrame(dadosCO2, columns=["Amazonia Legal", "Brasil"])
+st.markdown("## Emissão de CO2")
+st.write("""
+    #### Os dados abaixo apresentam um comparativo entre os indíces de emissão de CO2 no Brasil todo e estados da Amazônia Legal.
+
+""")
+st.bar_chart(dadosCO2, x="Ano", y=["Amazonia Legal", "Brasil"])
 
 # Dados do mapa para o estado (fictícios também)
 dados_mapa = pd.DataFrame(
