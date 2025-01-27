@@ -7,4 +7,3 @@ services:
       - "8501:8501"
     volumes: 
       - ./portal-web/app/:/app/app
-      - ./portal-web/data/:/app/data

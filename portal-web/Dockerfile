@@ -3,8 +3,6 @@ FROM python:3.9-slim
 # Diretório de trabalho dentro do contêiner
 WORKDIR /app
 
-RUN chmod -R 755 /app/
-
 # Copiando arquivos de requisitos para o contêiner
 COPY requirements.txt ./requirements.txt 
 
@@ -12,8 +10,7 @@ COPY requirements.txt ./requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copiando o restante da aplicação para o contêiner 
-COPY app/ ./app/
-COPY data/ ./data/
+COPY . app/
 
 # Porta padrão do Streamlit
 EXPOSE 8501
