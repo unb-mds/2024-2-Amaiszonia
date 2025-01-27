@@ -90,7 +90,7 @@ if selected == "Início":
     # )
 
     # Dados - Emissão CO2 Per Capita
-    dadosCO2 = pd.read_csv('./data/dados_emissao_co2_perCapita.csv')
+    dadosCO2 = pd.read_csv('../data/dados_emissao_co2_perCapita.csv')
     dadosCO2_frame = pd.DataFrame(dadosCO2, columns=["Amazonia Legal", "Brasil"])
     st.markdown("## Emissão de CO2")
     st.write("""
@@ -100,7 +100,7 @@ if selected == "Início":
     st.bar_chart(dadosCO2, x="Ano", y=["Amazonia Legal", "Brasil"])
     
     # Dados - Foco de Queimadas - Brasil x AL
-    dadosFOCO = pd.read_csv('./data/foco_queimadas.csv')
+    dadosFOCO = pd.read_csv('../data/foco_queimadas.csv')
     dadosFOCO_frame = pd.DataFrame(dadosFOCO, columns=["Amazonia Legal", "Brasil"])
     st.markdown("## Foco de Queimadas")
     ("""
@@ -109,7 +109,7 @@ if selected == "Início":
     st.line_chart(dadosFOCO, x="Ano", y=["Amazonia Legal", "Brasil"])
     
     # Dados - Desmatamento Acumulado
-    dadosDAM = pd.read_csv('./data/desmatamento_acumulado_INPE.csv')
+    dadosDAM = pd.read_csv('../data/desmatamento_acumulado_INPE.csv')
     st.markdown("## Desmatamento Acumulado")
     ("""
         #### Os dados abaixo apresentam um comparativo entre os indíces de desmatamento acumulado no Brasil todo e estados da Amazônia Legal.
