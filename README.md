@@ -30,12 +30,19 @@ Para executar o projeto, siga os passos:
 ```bash
 git clone https://github.com/unb-mds/2024-2-Amaiszonia.git
 ```
-2. Instale o **Docker**
-3. Na pasta raiz do projeto, execute o seguinte comando:
+2. Na pasta raiz do projeto, execute o seguinte comando para instalar as dependências:
 ```bash
-docker-compose up --build
+make config
 ```
-4. 🖱️ Acesso ao serviço:
+3. Em seguida, vá para o diretório **portal-web/app**:
+```bash
+cd portal-web/app
+```
+4. Agora, para executar o projeto, execute o seguinte comando:
+```bash
+make run
+```
+5. 🖱️ Acesso ao serviço:
    
 | **Serviço** | **URL** |
 | -------- | ----- |
