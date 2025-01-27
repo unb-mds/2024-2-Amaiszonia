@@ -1,16 +1,6 @@
 # mkdocs documentation
 site/
 
-# Next
-/frontend/.next/*
-/frontend/node_modules/*
-/out
-
-# Environment
-.env
-__pycache__/
-db.sqlite3
-
 # Docker
 *.env
 
