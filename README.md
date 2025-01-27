@@ -17,18 +17,30 @@ O objetivo principal do projeto é criar uma plataforma que facilite o acesso da
 
 ## 💻 Tecnologias utilizadas
 
-- **Linguagens de Programação:** Python,Next e Node.js
+- **Linguagens de Programação:** Python
 - **Prototipação:** Figma
-- **Framework:** Django, Django Rest
-- **Banco de dados:** Json/csv, SQlite
+- **Framework:** Streamlit e extras
+- **Banco de dados:** csv
 
-## Clonar o Repositório
+## 💾 Como executar o projeto
 
-Para clonar o repositório do projeto, utilize o seguinte comando:
+Para executar o projeto, siga os passos:
 
+1. Clonar o repositório
 ```bash
 git clone https://github.com/unb-mds/2024-2-Amaiszonia.git
 ```
+2. Instale o **Docker**
+3. Na pasta raiz do projeto, execute o seguinte comando:
+```bash
+docker-compose up --build
+```
+4. 🖱️ Acesso ao serviço:
+   
+| **Serviço** | **URL** |
+| -------- | ----- |
+| Web      | http://localhost:8501/    |
+
 ## Dependências do Projeto
 
 Para rodar o projeto, você precisará das seguintes dependências:
