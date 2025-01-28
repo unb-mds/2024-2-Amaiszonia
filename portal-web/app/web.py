@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import folium
 import requests
+import matplotlib.pyplot as plt
 from streamlit_folium import st_folium
 from streamlit_option_menu import option_menu
 
@@ -96,13 +97,28 @@ if selected == "Início":
     ("""
         #### Os dados abaixo apresentam um comparativo entre os indíces de desmatamento acumulado no Brasil todo e estados da Amazônia Legal.
     """)
-    st.bar_chart(dadosDAM, x="Ano", y=["Amazonia Legal", "Brasil"], height=350)    
+    st.bar_chart(dadosDAM, x="Ano", y=["Amazonia Legal", "Brasil"], height=350)
+    
+    # Dados - FRP e Risco Fogo, por município da AL
+    dadosFRP = load_data('dados_filtrados.csv')
+    st.markdown('## Fire Radiative Power e Risco Fogo')
+    municipios = dadosFRP["Municipio"].unique()
+    municipio_selecionado = st.selectbox("Selecione um município:", sorted(municipios))
+    
+    dadosFRP_filtrados = dadosFRP[dadosFRP["Municipio"] == municipio_selecionado]
+    
+    st.write(f'Dados sobre o município **{municipio_selecionado}**')
+    # Criar o gráfico de RiscoFogo e FRP
+    fig, ax = plt.subplots(figsize=(2, 1))
+    ax.plot(dadosFRP_filtrados.index, dadosFRP_filtrados["RiscoFogo"], label="Risco de Fogo", marker="o")
+    ax.plot(dadosFRP_filtrados.index, dadosFRP_filtrados["FRP"], label="FRP", marker="o")
+
+    st.bar_chart(dadosFRP_filtrados[["FRP", "RiscoFogo"]])
 
 if selected == "Sobre nós":
     st.markdown("""
         <h1> Portal A+zônia </h1>         
         """, unsafe_allow_html=True)
-
     st.markdown("""
         <h3> O <a href="https://github.com/unb-mds/2024-2-Squad10/">Portal A+zonia</a> é um projeto que visa monitorar dados ambientais referentes aos estados da Amazônia Legal. </h3>
 
