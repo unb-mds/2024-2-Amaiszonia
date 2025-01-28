@@ -2,11 +2,16 @@ import streamlit as st
 import pandas as pd
 import folium
 import requests
+import matplotlib.pyplot as plt
 from streamlit_folium import st_folium
 from streamlit_option_menu import option_menu
 
-st.set_page_config(page_title="Portal A+zônia", layout="wide")
+# Carregar dados
+@st.cache_data
+def load_data(nome):
+    return pd.read_csv("../data/" + nome)
 
+st.set_page_config(page_title="Portal A+zônia", layout="wide")
 
 st.markdown("""
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">        
@@ -70,67 +75,50 @@ if selected == "Início":
     mapa = criar_mapa()
     st_folium(mapa, width=900, height=500)
     
-    # Simulação de dados para o mapa (dados fictícios para coordenadas) depois a gente tem que adicionar um arquivo csv com as coordenadas)
-    # coordenadas_estados = {
-    #    "Acre": [(-9.97, -67.8), (-10.1, -67.7)],
-    #    "Amapá": [(1.4, -51.8), (1.5, -51.9)],
-    #    "Amazonas": [(-3.1, -60.0), (-4.1, -61.2)],
-    #    "Maranhão": [(-2.5, -44.3), (-3.2, -44.5)],
-    #    "Mato Grosso": [(-12.6, -55.0), (-13.5, -56.0)],
-    #    "Pará": [(-1.5, -48.5), (-1.7, -48.7)],
-    #    "Rondônia": [(-11.4, -61.4), (-12.3, -62.3)],
-    #    "Roraima": [(2.8, -60.7), (3.1, -61.1)],
-    #    "Tocantins": [(-10.2, -48.3), (-10.5, -48.7)],
-    # }
-
-    # Filtro pra filtrar por estados 
-    # estado_selecionado = st.sidebar.selectbox(
-    #    "Selecione o estado para consulta:",
-    #    estados_amazonia_legal
-    # )
-
     # Dados - Emissão CO2 Per Capita
-    dadosCO2 = pd.read_csv('../data/dados_emissao_co2_perCapita.csv')
-    dadosCO2_frame = pd.DataFrame(dadosCO2, columns=["Amazonia Legal", "Brasil"])
+    dadosCO2 = load_data("emissaoCO2.csv")
     st.markdown("## Emissão de CO2")
     st.write("""
         #### Os dados abaixo apresentam um comparativo entre os indíces de emissão de CO2 no Brasil todo e estados da Amazônia Legal.
-
     """)
-    st.bar_chart(dadosCO2, x="Ano", y=["Amazonia Legal", "Brasil"])
+    st.bar_chart(dadosCO2, x="Ano", y=["Amazonia Legal", "Brasil"], height=350)
     
     # Dados - Foco de Queimadas - Brasil x AL
-    dadosFOCO = pd.read_csv('../data/foco_queimadas.csv')
-    dadosFOCO_frame = pd.DataFrame(dadosFOCO, columns=["Amazonia Legal", "Brasil"])
+    dadosFOCO = load_data('foco_queimadas.csv')
     st.markdown("## Foco de Queimadas")
     ("""
         #### Os dados abaixo apresentam um comparativo entre os indíces de foco de queimadas no Brasil todo e estados da Amazônia Legal.
     """)
-    st.line_chart(dadosFOCO, x="Ano", y=["Amazonia Legal", "Brasil"])
+    st.line_chart(dadosFOCO, x="Ano", y=["Amazonia Legal", "Brasil"], height=350)
     
     # Dados - Desmatamento Acumulado
-    dadosDAM = pd.read_csv('../data/desmatamento_acumulado_INPE.csv')
+    dadosDAM = load_data('desmatamento_acumulado.csv')
     st.markdown("## Desmatamento Acumulado")
     ("""
         #### Os dados abaixo apresentam um comparativo entre os indíces de desmatamento acumulado no Brasil todo e estados da Amazônia Legal.
     """)
-    st.bar_chart(dadosDAM, x="Ano", y=["Amazonia Legal", "Brasil"])
+    st.bar_chart(dadosDAM, x="Ano", y=["Amazonia Legal", "Brasil"], height=350)
+    
+    # Dados - FRP e Risco Fogo, por município da AL
+    dadosFRP = load_data('dados_filtrados.csv')
+    st.markdown('## Fire Radiative Power e Risco Fogo')
+    municipios = dadosFRP["Municipio"].unique()
+    municipio_selecionado = st.selectbox("Selecione um município:", sorted(municipios))
+    
+    dadosFRP_filtrados = dadosFRP[dadosFRP["Municipio"] == municipio_selecionado]
+    
+    st.write(f'Dados sobre o município **{municipio_selecionado}**')
+    # Criar o gráfico de RiscoFogo e FRP
+    fig, ax = plt.subplots(figsize=(2, 1))
+    ax.plot(dadosFRP_filtrados.index, dadosFRP_filtrados["RiscoFogo"], label="Risco de Fogo", marker="o")
+    ax.plot(dadosFRP_filtrados.index, dadosFRP_filtrados["FRP"], label="FRP", marker="o")
 
-    # Dados do mapa para o estado (fictícios também)
-    # dados_mapa = pd.DataFrame(
-    #    coordenadas_estados[estado_selecionado],
-    #    columns=["lat", "lon"]
-    # )
-
-    # Título para o mapa
-    # st.markdown(f"## Mapa de localizações no estado: {estado_selecionado}")
-    # st.map(dados_mapa)
+    st.bar_chart(dadosFRP_filtrados[["FRP", "RiscoFogo"]])
 
 if selected == "Sobre nós":
     st.markdown("""
         <h1> Portal A+zônia </h1>         
         """, unsafe_allow_html=True)
-
     st.markdown("""
         <h3> O <a href="https://github.com/unb-mds/2024-2-Squad10/">Portal A+zonia</a> é um projeto que visa monitorar dados ambientais referentes aos estados da Amazônia Legal. </h3>
 
