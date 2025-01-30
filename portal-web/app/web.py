@@ -2,7 +2,6 @@ import streamlit as st
 import pandas as pd
 import folium
 import requests
-import matplotlib.pyplot as plt
 from streamlit_folium import st_folium
 from streamlit_option_menu import option_menu
 
@@ -109,10 +108,6 @@ if selected == "Início":
     
     st.write(f'Dados sobre o município **{municipio_selecionado}**')
     # Criar o gráfico de RiscoFogo e FRP
-    fig, ax = plt.subplots(figsize=(2, 1))
-    ax.plot(dadosFRP_filtrados.index, dadosFRP_filtrados["RiscoFogo"], label="Risco de Fogo", marker="o")
-    ax.plot(dadosFRP_filtrados.index, dadosFRP_filtrados["FRP"], label="FRP", marker="o")
-
     st.bar_chart(dadosFRP_filtrados[["FRP", "RiscoFogo"]])
 
 if selected == "Sobre nós":

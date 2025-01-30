@@ -4,4 +4,3 @@ watchdog
 streamlit-option-menu
 folium
 streamlit_folium
-matplotlib.pyplot
