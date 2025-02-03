@@ -78,7 +78,7 @@ if selected == "Início":
     dadosCO2 = load_data("emissaoCO2.csv")
     st.markdown("## Emissão de CO2")
     st.write("""
-        #### Os dados abaixo apresentam um comparativo entre os indíces de emissão de CO2 no Brasil todo e estados da Amazônia Legal.
+        ##### Os dados abaixo apresentam um comparativo entre os indíces de emissão de CO2 no Brasil todo e estados da Amazônia Legal.
     """)
     st.bar_chart(dadosCO2, x="Ano", y=["Amazonia Legal", "Brasil"], height=350)
     
@@ -86,7 +86,7 @@ if selected == "Início":
     dadosFOCO = load_data('foco_queimadas.csv')
     st.markdown("## Foco de Queimadas")
     ("""
-        #### Os dados abaixo apresentam um comparativo entre os indíces de foco de queimadas no Brasil todo e estados da Amazônia Legal.
+        ##### Os dados abaixo apresentam um comparativo entre os indíces de foco de queimadas no Brasil todo e estados da Amazônia Legal.
     """)
     st.line_chart(dadosFOCO, x="Ano", y=["Amazonia Legal", "Brasil"], height=350)
     
@@ -94,21 +94,34 @@ if selected == "Início":
     dadosDAM = load_data('desmatamento_acumulado.csv')
     st.markdown("## Desmatamento Acumulado")
     ("""
-        #### Os dados abaixo apresentam um comparativo entre os indíces de desmatamento acumulado no Brasil todo e estados da Amazônia Legal.
+        ##### Os dados abaixo apresentam um comparativo entre os indíces de desmatamento acumulado no Brasil todo e estados da Amazônia Legal.
     """)
     st.bar_chart(dadosDAM, x="Ano", y=["Amazonia Legal", "Brasil"], height=350)
     
     # Dados - FRP e Risco Fogo, por município da AL
     dadosFRP = load_data('dados_filtrados.csv')
-    st.markdown('## Fire Radiative Power e Risco Fogo')
+    st.markdown('## FRP e Risco Fogo')
+    st.markdown("""
+        ### Fire Radiative Power (FRP)
+
+        * O FRP (Potência Radiativa do Fogo) mede a energia térmica emitida por um incêndio em megawatts (MW).
+        * Ele é estimado a partir de imagens de satélite e indica a intensidade do fogo.
+        * Quanto maior o FRP, mais intenso e energético é o incêndio.
+        
+        ### Risco de Fogo
+
+        * O Risco de Fogo é um índice que estima a probabilidade de ocorrência de incêndios com base em fatores ambientais.
+        * Considera variáveis como temperatura, umidade, precipitação e quantidade de dias sem chuva.
+        * Um valor alto indica condições favoráveis para a propagação do fogo.    
+    """, unsafe_allow_html=True)
     municipios = dadosFRP["Municipio"].unique()
-    municipio_selecionado = st.selectbox("Selecione um município:", sorted(municipios))
+    municipio_selecionado = st.selectbox(" ## Selecione um município:", sorted(municipios))
     
     dadosFRP_filtrados = dadosFRP[dadosFRP["Municipio"] == municipio_selecionado]
     
     st.write(f'Dados sobre o município **{municipio_selecionado}**')
     # Criar o gráfico de RiscoFogo e FRP
-    st.bar_chart(dadosFRP_filtrados[["FRP", "RiscoFogo"]])
+    st.bar_chart(dadosFRP_filtrados[["FRP", "RiscoFogo"]], height=200, width=20)
 
 if selected == "Sobre nós":
     st.markdown("""
