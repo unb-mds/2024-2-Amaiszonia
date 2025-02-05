@@ -1,11 +1,11 @@
-# [Portal A+zonia](https://github.com/unb-mds/2024-2-Squad10/)
+# [Portal Datazonia](https://github.com/unb-mds/2024-2-Squad10/)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
 [![GitHub issues](https://img.shields.io/github/issues/unb-mds/2024-2-Squad10)](https://img.shields.io/github/issues/unb-mds/2024-2-Squad10)
 [![GitHub contributors](https://img.shields.io/github/contributors/unb-mds/2023-2-SuaGradeUnB)](https://img.shields.io/github/contributors/unb-mds/2024-2-Squad10)
 [![GitHub stars](https://img.shields.io/github/stars/unb-mds/2024-2-Squad10)](https://img.shields.io/github/stars/unb-mds/2024-2-Squad10)
 
-O [Portal A+zonia](https://github.com/unb-mds/2024-2-Squad10/) é um projeto da matéria **Métodos de Desenvolvimento de Software**, ministrada na **Universidade de Brasília** pela professora Carla Rocha ([@RochaCarla](https://github.com/RochaCarla)).
+O [Portal Datazonia](https://github.com/unb-mds/2024-2-Squad10/) é um projeto da matéria **Métodos de Desenvolvimento de Software**, ministrada na **Universidade de Brasília** pela professora Carla Rocha ([@RochaCarla](https://github.com/RochaCarla)).
 
 O objetivo principal do projeto é criar uma plataforma que facilite o acesso da população a dados atualizados sobre a situação da Amazônia Legal, com foco no desmatamento e nas queimadas. A plataforma oferecerá uma interface intuitiva para visualizar informações relevantes, promovendo maior conscientização e entendimento das questões ambientais atuais, e contribuindo para o monitoramento e a divulgação desses dados de forma acessível e prática.
 
