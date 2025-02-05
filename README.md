@@ -65,7 +65,7 @@ Para rodar o projeto, você precisará das seguintes dependências:
 
 ## 📚 Documentação
 
-- Você pode encontrar a documentação do projeto clicando [aqui](https://unb-mds.github.io/2024-2-Amaiszonia/).
+- Você pode encontrar a documentação do projeto clicando [aqui](https://unb-mds.github.io/2024-2-Datazonia/).
 
 ## 📌 Extras
 
