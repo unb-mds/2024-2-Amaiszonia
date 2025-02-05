@@ -89,6 +89,25 @@ def get_municipios():
     conn.close()
     return municipios
 
+@app.get("/municipio/{municipio}")
+def get_risco_fogo(municipio: str):
+    conn = get_db_connection()
+    cursor = conn.cursor()
+
+    cursor.execute(
+        "SELECT Municipio, RiscoFogo, FRP FROM filtrados_data WHERE Municipio = ?",
+        (municipio,)
+    )
+    
+    resultado = cursor.fetchone()
+    conn.close()
+
+    return{
+            "Municipio": resultado["Municipio"],
+            "RiscoFogo": resultado["RiscoFogo"],
+            "FRP": resultado["FRP"]
+        }
+
 # Iniciar a aplicação com Uvicorn
 if __name__ == '__main__':
     import uvicorn
