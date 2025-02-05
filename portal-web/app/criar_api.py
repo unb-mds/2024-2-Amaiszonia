@@ -7,7 +7,7 @@ app = FastAPI()
 
 # Função para conectar ao banco de dados SQLite
 def get_db_connection():
-    conn = sqlite3.connect('dados.db')
+    conn = sqlite3.connect('../data/dados.db')
     conn.row_factory = sqlite3.Row  # Para obter resultados como dicionários
     return conn
 
