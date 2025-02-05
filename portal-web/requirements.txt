@@ -4,3 +4,5 @@ watchdog
 streamlit-option-menu
 folium
 streamlit_folium
+fastapi
+uvicorn
