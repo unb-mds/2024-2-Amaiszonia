@@ -78,6 +78,17 @@ def get_foco_data():
     
     return result
 
+@app.get("/municipios", response_model=list[str])
+def get_municipios():
+    conn = get_db_connection()
+    cursor = conn.cursor()
+    
+    cursor.execute("SELECT DISTINCT Municipio FROM filtrados_data ORDER BY Municipio")
+    municipios = [row["Municipio"] for row in cursor.fetchall()]
+    
+    conn.close()
+    return municipios
+
 # Iniciar a aplicação com Uvicorn
 if __name__ == '__main__':
     import uvicorn
