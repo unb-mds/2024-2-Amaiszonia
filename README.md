@@ -28,7 +28,7 @@ Para executar o projeto, siga os passos:
 
 1. Clonar o repositório
 ```bash
-git clone https://github.com/unb-mds/2024-2-Amaiszonia.git
+git clone https://github.com/unb-mds/2024-2-Datazonia.git
 ```
 2. Na pasta raiz do projeto, execute o seguinte comando para instalar as dependências:
 ```bash
