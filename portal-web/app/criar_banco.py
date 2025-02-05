@@ -38,11 +38,21 @@ CREATE TABLE IF NOT EXISTS dam_data (
     Al REAL
 )
 ''')
+cursor.execute('''
+CREATE TABLE IF NOT EXISTS filtrados_data (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    Estado VARCHAR(30),
+    Municipio VARCHAR(30),
+    RiscoFogo REAL,
+    FRP REAL
+)
+''')
 
 # Carregar dados dos CSVs
 dadosCO2 = pd.read_csv(os.path.join(DATA_PATH, 'emissaoCO2.csv'))
 dadosFOCO = pd.read_csv(os.path.join(DATA_PATH, 'foco_queimadas.csv'))
 dadosDAM = pd.read_csv(os.path.join(DATA_PATH, 'desmatamento_acumulado.csv'))
+dadosFILT = pd.read_csv(os.path.join(DATA_PATH, 'dados_filtrados.csv'))
 print(dadosCO2)
 print(dadosFOCO)
 print(dadosDAM)
@@ -65,6 +75,12 @@ for _, row in dadosDAM.iterrows():
     VALUES (?, ?, ?)
     ''', (row['Ano'], row['Brasil'], row['Amazonia Legal']))
 
+for _, row in dadosFILT.iterrows():
+    cursor.execute('''
+    INSERT INTO filtrados_data(Estado, Municipio, RiscoFogo, FRP)
+    VALUES (?, ?, ?, ?)
+    ''', (row['Estado'], row['Municipio'], row['RiscoFogo'],row['FRP'])
+                   )
 # Confirmar e fechar conexão
 conn.commit()
 conn.close()
