@@ -53,9 +53,7 @@ dadosCO2 = pd.read_csv(os.path.join(DATA_PATH, 'emissaoCO2.csv'))
 dadosFOCO = pd.read_csv(os.path.join(DATA_PATH, 'foco_queimadas.csv'))
 dadosDAM = pd.read_csv(os.path.join(DATA_PATH, 'desmatamento_acumulado.csv'))
 dadosFILT = pd.read_csv(os.path.join(DATA_PATH, 'dados_filtrados.csv'))
-print(dadosCO2)
-print(dadosFOCO)
-print(dadosDAM)
+
 # Inserir dados no banco
 for _, row in dadosCO2.iterrows():
     cursor.execute('''

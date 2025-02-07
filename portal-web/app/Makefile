@@ -3,7 +3,7 @@ banco:
 
 # Rodar o script da API
 api:
-	python ./criar_api.py
+	python ./criar_api.py & sleep 2
 
 # Rodar o Streamlit
 web:
