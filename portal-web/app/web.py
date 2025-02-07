@@ -4,6 +4,7 @@ import folium
 import requests
 from streamlit_folium import st_folium
 from streamlit_option_menu import option_menu
+import def_funcao
 
 # Carregar dados
 @st.cache_data
@@ -114,14 +115,25 @@ if selected == "Início":
         * Considera variáveis como temperatura, umidade, precipitação e quantidade de dias sem chuva.
         * Um valor alto indica condições favoráveis para a propagação do fogo.    
     """, unsafe_allow_html=True)
-    municipios = dadosFRP["Municipio"].unique()
-    municipio_selecionado = st.selectbox(" ## Selecione um município:", sorted(municipios))
     
-    dadosFRP_filtrados = dadosFRP[dadosFRP["Municipio"] == municipio_selecionado]
+    municipios = def_funcao.get_municipios()
     
-    st.write(f'Dados sobre o município **{municipio_selecionado}**')
-    # Criar o gráfico de RiscoFogo e FRP
-    st.bar_chart(dadosFRP_filtrados[["FRP", "RiscoFogo"]], height=200, width=20)
+    if municipios:
+        municipio_selecionado = st.selectbox("Selecione um município:", sorted(municipios))
+        
+        # Requisição para obter dados do risco de fogo e FRP do município selecionado
+        dados_municipio = def_funcao.get_risco_fogo(municipio_selecionado)
+        
+        if dados_municipio:
+            st.write(f'Dados sobre o município **{municipio_selecionado}**')
+            st.write(f"Risco de Fogo: {dados_municipio['RiscoFogo']}")
+            st.write(f"FRP: {dados_municipio['FRP']}")
+
+            # Criar o gráfico de RiscoFogo e FRP
+            st.bar_chart({
+                "FRP": dados_municipio['FRP'],
+                "RiscoFogo": dados_municipio['RiscoFogo']
+            }, height=200, width=20)
 
 if selected == "Sobre nós":
     st.markdown("""
