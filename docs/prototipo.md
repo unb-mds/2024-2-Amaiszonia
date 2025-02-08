@@ -2,7 +2,7 @@
 
 ## Introdução
 
-O **A+zônia** é um site desenvolvido para promover a conscientização ambiental sobre a Amazônia Legal. Ele oferece informações atualizadas e organizadas sobre queimadas e desmatamento, utilizando gráficos e mapas interativos para facilitar o entendimento do público. Além disso, permite que os usuários compartilhem suas opiniões e ideias relacionadas ao tema por meio de um formulário simples.
+O **Datazonia** é um site desenvolvido para promover a conscientização ambiental sobre a Amazônia Legal. Ele oferece informações atualizadas e organizadas sobre queimadas e desmatamento, utilizando gráficos e mapas interativos para facilitar o entendimento do público. Além disso, permite que os usuários compartilhem suas opiniões e ideias relacionadas ao tema por meio de um formulário simples.
 
 ### Protótipo Visual
 
