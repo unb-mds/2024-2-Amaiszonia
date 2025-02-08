@@ -44,9 +44,6 @@ As histórias detalham tarefas específicas que compõem cada épico:
 - Selecionar filtro em gráficos.
 - Mostrar filtros.
 
-#### **Formulário** (laranja):
-- Preencher dados para envio.
-- Preenchimento de sua resposta.
 
 ---
 
