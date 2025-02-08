@@ -1,4 +1,4 @@
-# Arquitetura do Sistema - Datazoia
+# Arquitetura do Sistema - Datazonia
 
 ## Introdução
 
