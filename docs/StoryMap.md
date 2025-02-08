@@ -1,7 +1,7 @@
-# Story Map do Projeto A+zônia
+# Story Map do Projeto Datazonia
 
 ## Introdução
-O **Story Map** é uma ferramenta que estrutura os objetivos do projeto **A+zônia**, organizando suas funcionalidades de forma hierárquica e clara. Ele destaca os principais temas, épicos e histórias, permitindo um entendimento prático das funcionalidades da plataforma.
+O **Story Map** é uma ferramenta que estrutura os objetivos do projeto **Datazonia**, organizando suas funcionalidades de forma hierárquica e clara. Ele destaca os principais temas, épicos e histórias, permitindo um entendimento prático das funcionalidades da plataforma.
 
 <iframe 
     width="100%" 
@@ -56,5 +56,5 @@ A organização do **Story Map** permite:
 2. Melhor planejamento e distribuição de tarefas.
 3. Garantia de que as funcionalidades essenciais sejam entregues primeiro.
 
-O **Story Map** do **A+zônia** é uma base para o desenvolvimento iterativo, assegurando que cada componente seja integrado de maneira eficiente e com foco na experiência do usuário.
+O **Story Map** do **Datazonia** é uma base para o desenvolvimento iterativo, assegurando que cada componente seja integrado de maneira eficiente e com foco na experiência do usuário.
 

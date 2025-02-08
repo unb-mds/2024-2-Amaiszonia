@@ -11,7 +11,7 @@ import def_funcao
 def load_data(nome):
     return pd.read_csv("../data/" + nome)
 
-st.set_page_config(page_title="Portal A+zônia", layout="wide")
+st.set_page_config(page_title="Portal Datazonia", layout="wide")
 
 st.markdown("""
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">        
@@ -137,9 +137,9 @@ if selected == "Início":
 
 if selected == "Sobre nós":
     st.markdown("""
-        <h1> Portal A+zônia </h1>         
+        <h1> Portal Datazônia </h1>         
         """, unsafe_allow_html=True)
     st.markdown("""
-        <h3> O <a href="https://github.com/unb-mds/2024-2-Squad10/">Portal A+zonia</a> é um projeto que visa monitorar dados ambientais referentes aos estados da Amazônia Legal. </h3>
+        <h3> O <a href="https://github.com/unb-mds/2024-2-Squad10/">Portal Datazonia</a> é um projeto que visa monitorar dados ambientais referentes aos estados da Amazônia Legal. </h3>
 
     """, unsafe_allow_html=True)
