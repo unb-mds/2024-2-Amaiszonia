@@ -20,7 +20,7 @@ O **Story Map** é uma ferramenta que estrutura os objetivos do projeto **Datazo
 ### **Themes (Temas)**
 Os temas representam as áreas principais de foco do projeto:
 - **Acessar painel de controle** (azul): funcionalidades voltadas para a visualização e interação com dados.
-- **Formulário** (laranja): funcionalidades relacionadas ao preenchimento e envio de informações pelos usuários.
+- **Sugestões** (laranja): funcionalidades relacionadas ao pop-up que irá mostrar uma área para o usuário dar sugestões e feedbacks.
 
 ---
 
@@ -30,8 +30,8 @@ Os épicos são grandes funcionalidades dentro de cada tema:
   - Exibir os dados em formato de gráficos.
   - Exibir os dados em formato de mapas.
 
-- **Formulário** (laranja):
-  - Preenchimento das áreas descritas para envio de sua resposta.
+- **Sugestões** (laranja):
+  - Botão que gera um pop-up para o preenchimento das sugestões.
 
 ---
 
