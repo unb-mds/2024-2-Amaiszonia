@@ -1,13 +1,14 @@
 banco:
-	python ./criar_banco.py
+	python ./criar_banco.py  # <-- TAB aqui
 
-# Rodar o script da API
 api:
-	python ./criar_api.py & sleep 2
+	python ./criar_api.py & sleep 5  # <-- TAB aqui
 
-# Rodar o Streamlit
 web:
-	streamlit run web.py
+	streamlit run web.py  # <-- TAB aqui
 
-# Rodar tudo em sequência
 run: banco api web
+
+stop:
+	pkill -f "streamlit run web.py"  # <-- TAB aqui
+	pkill -f "python criar_api.py"   # <-- TAB aqui
