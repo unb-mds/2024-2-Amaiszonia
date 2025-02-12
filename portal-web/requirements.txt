@@ -6,3 +6,4 @@ folium
 streamlit_folium
 fastapi
 uvicorn
+plotly
