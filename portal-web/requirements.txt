@@ -10,3 +10,4 @@ plotly
 pytest 
 coverage
 pylint
+selenium
