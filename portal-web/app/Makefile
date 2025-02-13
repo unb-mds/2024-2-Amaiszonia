@@ -1,14 +1,14 @@
 banco:
-	python ./criar_banco.py  # <-- TAB aqui
+	python ./criar_banco.py
 
 api:
-	python ./criar_api.py & sleep 5  # <-- TAB aqui
+	python ./criar_api.py & sleep 5
 
 web:
-	streamlit run web.py  # <-- TAB aqui
+	streamlit run web.py
 
 run: banco api web
 
 stop:
-	pkill -f "streamlit run web.py"  # <-- TAB aqui
-	pkill -f "python criar_api.py"   # <-- TAB aqui
+	pkill -f "streamlit run web.py"
+	pkill -f "python criar_api.py"
