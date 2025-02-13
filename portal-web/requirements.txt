@@ -7,3 +7,6 @@ streamlit_folium
 fastapi
 uvicorn
 plotly
+pytest 
+coverage
+pylint
