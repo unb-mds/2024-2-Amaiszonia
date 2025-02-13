@@ -6,3 +6,6 @@ site/
 
 # VSCode
 .vscode/
+
+# Database
+dados.db
