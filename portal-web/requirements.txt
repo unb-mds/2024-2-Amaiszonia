@@ -11,3 +11,4 @@ pytest
 coverage
 pylint
 selenium
+python-dotenv

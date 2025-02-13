@@ -5,6 +5,13 @@ from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 import time
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
+EMAIL = os.getenv("EMAIL")
+SENHA = os.getenv("SENHA")
 
 driver = webdriver.Chrome()
 
@@ -13,8 +20,8 @@ time.sleep(5)
 #login
 driver.find_element(By.XPATH, "/html/body/div[1]/nav/div/div[2]/div/p").click()
 driver.find_element(By.XPATH, "/html/body/div[11]/div/section[1]/section/input[1]").click()
-driver.find_element(By.XPATH, "/html/body/div[11]/div/section[1]/section/input[1]").send_keys("equipe.datazonia@gmail.com")
-driver.find_element(By.XPATH, "/html/body/div[11]/div/section[1]/section/input[2]").send_keys("DatazoniaEquipe20242" + Keys.RETURN)
+driver.find_element(By.XPATH, "/html/body/div[11]/div/section[1]/section/input[1]").send_keys(EMAIL)
+driver.find_element(By.XPATH, "/html/body/div[11]/div/section[1]/section/input[2]").send_keys(SENHA)
 driver.find_element(By.XPATH, "/html/body/div[11]/div/section[1]/section/input[2]").click()
 driver.find_element(By.XPATH, "/html/body/div[11]/div/section[2]/div[2]").click()
 time.sleep(1)
