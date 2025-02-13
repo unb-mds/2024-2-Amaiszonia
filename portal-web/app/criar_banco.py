@@ -1,17 +1,18 @@
+"""
+Este módulo contém funções para criar e interagir com o banco de dados SQLite.
+Ele realiza operações de criação de tabelas e inserção de dados no banco.
+"""
 import os
 import sqlite3
 import pandas as pd
 
-# Configurar caminhos corretos
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_PATH = os.path.join(BASE_DIR, '../data/')
 DB_PATH = os.path.join(DATA_PATH, 'dados.db')
 
-# Conectar ao banco de dados SQLite
 conn = sqlite3.connect(DB_PATH)
 cursor = conn.cursor()
 
-# Criar as tabelas
 cursor.execute('''
 CREATE TABLE IF NOT EXISTS co2_data (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -48,13 +49,11 @@ CREATE TABLE IF NOT EXISTS filtrados_data (
 )
 ''')
 
-# Carregar dados dos CSVs
 dadosCO2 = pd.read_csv(os.path.join(DATA_PATH, 'emissaoCO2.csv'))
 dadosFOCO = pd.read_csv(os.path.join(DATA_PATH, 'foco_queimadas.csv'))
 dadosDAM = pd.read_csv(os.path.join(DATA_PATH, 'desmatamento_acumulado.csv'))
 dadosFILT = pd.read_csv(os.path.join(DATA_PATH, 'dados_filtrados.csv'))
 
-# Inserir dados no banco
 for _, row in dadosCO2.iterrows():
     cursor.execute('''
     INSERT INTO co2_data (Ano, Brasil, AL)
@@ -79,7 +78,7 @@ for _, row in dadosFILT.iterrows():
     VALUES (?, ?, ?, ?)
     ''', (row['Estado'], row['Municipio'], row['RiscoFogo'],row['FRP'])
                    )
-# Confirmar e fechar conexão
+
 conn.commit()
 conn.close()
 
