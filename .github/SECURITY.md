@@ -5,7 +5,7 @@ A segurança do nosso projeto é fundamental. Se você encontrar alguma vulnerab
 ## 📢 Relatando Vulnerabilidades
 Se você encontrar uma falha de segurança, por favor **não abra uma issue pública**. Em vez disso, entre em contato através do seguinte e-mail:
 
-📩 **equipe.datazonia@gmail.com** (ou outro contato seguro)
+📩 **equipe.datazonia@gmail.com**
 
 Inclua o máximo de detalhes possível:
 - Uma descrição do problema
