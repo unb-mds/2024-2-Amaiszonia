@@ -9,7 +9,7 @@ O **Datazonia** é um site desenvolvido para promover a conscientização ambien
 O design do site foi desenvolvido com o objetivo de ser intuitivo e de fácil navegação, garantindo acessibilidade para todos os públicos. Confira abaixo uma prévia do layout no Figma:
 
 <iframe
-  src="https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/proto/fctzH8zN5fNSi8kJrPfdjB/Pr%C3%B3totipo?node-id=8-2&node-type=canvas&t=InQMkgO6EkkmNqLR-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=8%3A2"
+  src="https://www.figma.com/design/okrOcaXkDWaPg1EUlvPbm3/Protótipo-DataZonia?node-id=6-121&t=Tr9qWf9ZWjGuUk5c-0"
   width="800"
   height="600"
   style="border: none;"
