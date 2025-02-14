@@ -76,4 +76,4 @@ Para rodar o projeto, você precisará das seguintes dependências:
 - Você pode encontrar o Story Map do projeto clicando [aqui](https://miro.com/app/board/uXjVL_FNLfk=/)
 
 ### Protótipo 
-- Você pode encontrar o Protótipo do projeto clicando [aqui](https://www.figma.com/proto/fctzH8zN5fNSi8kJrPfdjB/Pr%C3%B3totipo?node-id=8-2&node-type=canvas&t=InQMkgO6EkkmNqLR-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=8%3A2)
+- Você pode encontrar o Protótipo do projeto clicando [aqui](https://www.figma.com/design/okrOcaXkDWaPg1EUlvPbm3/Protótipo-DataZonia?node-id=6-121&t=Tr9qWf9ZWjGuUk5c-0)
