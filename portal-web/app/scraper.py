@@ -15,9 +15,9 @@ import def_funcao
 from def_funcao import DownloadHandler  # Importação do próprio projeto
 load_dotenv()
 
-EMAIL = os.getenv("EMAIL")
+EMAIL = os.getenv("EMAIL") # Dados cadastrados no .env, utilizado no site de dados. (AL em Dados)
 SENHA = os.getenv("SENHA")
-DOWNLOAD_DIR = os.getenv("CAMINHO")
+DOWNLOAD_DIR = os.getenv("CAMINHO") # Diretório de download. Coloque o caminho no .env.
 
 
 def baixar_dados(tabela, url):
