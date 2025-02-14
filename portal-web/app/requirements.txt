@@ -1,0 +1,15 @@
+streamlit
+pandas
+watchdog
+streamlit-option-menu
+folium
+streamlit_folium
+fastapi
+uvicorn
+plotly
+plotly-express
+pytest 
+coverage
+pylint
+selenium
+python-dotenv
