@@ -44,4 +44,4 @@ O back-end, embora não visível aos usuários finais, é essencial para gerenci
 
 ## Conclusão
 
-A arquitetura do projeto Datazonia foi projetada para ser modular, escalável e de fácil manutenção, utilizando tecnologias amplamente adotadas no mercado. Com o uso do **Streamlit**, **SQLite** e **Docker**, o sistema oferece robustez para lidar com o volume esperado de usuários e flexibilidade para evoluir conforme as necessidades. A separação clara entre front-end, API e banco de dados possibilita um desenvolvimento colaborativo eficiente e facilita a expansão futura da plataforma.
+A arquitetura do projeto Datazonia foi projetada para ser modular, escalável e de fácil manutenção, utilizando tecnologias amplamente adotadas no mercado. Com o uso do **Streamlit** e **SQLite**, o sistema oferece robustez para lidar com o volume esperado de usuários e flexibilidade para evoluir conforme as necessidades. A separação clara entre front-end, API e banco de dados possibilita um desenvolvimento colaborativo eficiente e facilita a expansão futura da plataforma.
