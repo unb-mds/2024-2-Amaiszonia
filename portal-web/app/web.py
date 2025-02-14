@@ -116,15 +116,19 @@ st.markdown('<div class="spacer"></div>', unsafe_allow_html=True)
 
 # --- Função para criar gráficos com cores temáticas e renomear "Brasil" ---
 def criar_grafico(df, x_col, y_cols, titulo, tipo="bar", cores=None):
+    # Definir cores padrão (verde escuro e verde claro)
+    if cores is None:
+        cores = ["#3fd170", "#223f18"]  # Verde claro e verde escuro
+
     # Renomear a coluna "Brasil" para "Resto do Brasil"
     df = df.rename(columns={"Brasil": "Resto do Brasil"})
     y_cols = ["Resto do Brasil" if col == "Brasil" else col for col in y_cols]
-    
+
     if tipo == "bar":
         fig = px.bar(df, x=x_col, y=y_cols, title=titulo, barmode="group", color_discrete_sequence=cores)
     else:
         fig = px.line(df, x=x_col, y=y_cols, title=titulo, markers=True, color_discrete_sequence=cores)
-    
+
     # Personalização do layout
     fig.update_layout(
         plot_bgcolor="white",
@@ -142,6 +146,7 @@ def criar_grafico(df, x_col, y_cols, titulo, tipo="bar", cores=None):
         legend=dict(font=dict(color="#023616"))
     )
     return fig
+
 
 
 
@@ -318,7 +323,7 @@ else:
     dadosCO2 = load_data("emissaoCO2.csv")
     st.markdown("<h2 class='section-title'>Emissão de CO2</h2>", unsafe_allow_html=True)
     st.markdown("<h5 style='text-align: center; '>Comparativo entre os índices de emissão de CO2 na Amazônia Legal e no restante do Brasil.</h5>", unsafe_allow_html=True)
-    st.plotly_chart(criar_grafico(dadosCO2, "Ano", ["Amazonia Legal", "Resto do Brasil"], "Emissão de CO2", cores=["#0009de", "#87e7f7"]))
+    st.plotly_chart(criar_grafico(dadosCO2, "Ano", ["Amazonia Legal", "Resto do Brasil"], "Emissão de CO2"))
 
     st.markdown("<hr>", unsafe_allow_html=True)
 
@@ -326,7 +331,7 @@ else:
     dadosFOCO = load_data("foco_queimadas.csv")
     st.markdown("<h2 class='section-title'>Foco de Queimadas</h2>", unsafe_allow_html=True)
     st.markdown("<h5 style='text-align: center; '>Comparativo entre os índices de foco de queimadas na Amazônia Legal e no restante do Brasil.</h5>", unsafe_allow_html=True)
-    st.plotly_chart(criar_grafico(dadosFOCO, "Ano", ["Amazonia Legal", "Resto do Brasil"], "Foco de Queimadas", tipo="line", cores=["#ff7300", "#f7e45f"]))
+    st.plotly_chart(criar_grafico(dadosFOCO, "Ano", ["Amazonia Legal", "Resto do Brasil"], "Foco de Queimadas", tipo="line"))
 
     st.markdown("<hr>", unsafe_allow_html=True)
 
@@ -334,73 +339,65 @@ else:
     dadosDAM = load_data("desmatamento_acumulado.csv")
     st.markdown("<h2 class='section-title'>Desmatamento Acumulado</h2>", unsafe_allow_html=True)
     st.markdown("<h5 style='text-align: center; '>Comparativo entre os índices de desmatamento acumulado na Amazônia Legal e no restante do Brasil.</h5>", unsafe_allow_html=True)
-    st.plotly_chart(criar_grafico(dadosDAM, "Ano", ["Amazonia Legal", "Resto do Brasil"], "Desmatamento Acumulado", cores=["#3fd170", "#223f18"]))
+    st.plotly_chart(criar_grafico(dadosDAM, "Ano", ["Amazonia Legal", "Resto do Brasil"], "Desmatamento Acumulado"))
 
     st.markdown("<hr>", unsafe_allow_html=True)
 
-    # --- Seção FRP e Risco de Fogo ---
-    st.markdown("<h2 class='section-title'>FRP e Risco de Fogo</h2>", unsafe_allow_html=True)
-    st.markdown(
-        """
-        <p style='text-align: center; '>
-            <strong>Fire Radiative Power (FRP):</strong> Mede a energia térmica emitida por um incêndio em megawatts (MW).<br>
-            <strong>Risco de Fogo:</strong> Índice que estima a probabilidade de incêndios com base em variáveis ambientais.
-        </p>
-        """, unsafe_allow_html=True
-    )
 
     # Obtém a lista de municípios
     municipios = def_funcao.get_municipios()
     if municipios:
         municipio_selecionado = st.selectbox("Selecione um município:", sorted(municipios))
-        
-        # Obtém os dados do município selecionado
-        dados_municipio = def_funcao.get_risco_fogo(municipio_selecionado)
-        if dados_municipio:
-            st.markdown(f"<h3>Dados sobre {municipio_selecionado}</h3>", unsafe_allow_html=True)
+    
+    # Obtém os dados do município selecionado
+    dados_municipio = def_funcao.get_risco_fogo(municipio_selecionado)
+    if dados_municipio:
+        st.markdown(f"<h3>Dados sobre {municipio_selecionado}</h3>", unsafe_allow_html=True)
 
-            # Cria colunas para exibir os valores de Risco de Fogo e FRP
-            col1, col2 = st.columns(2)
-            with col1:
-                st.markdown(f'<p class="metric-container">Risco de Fogo: {dados_municipio["RiscoFogo"]}</p>', unsafe_allow_html=True)
-            with col2:
-                st.markdown(f'<p class="metric-container">FRP: {dados_municipio["FRP"]}</p>', unsafe_allow_html=True)
+        # Cria colunas para exibir os valores de Risco de Fogo e FRP
+        col1, col2 = st.columns(2)
+        with col1:
+            st.markdown(f'<p class="metric-container">Risco de Fogo: {dados_municipio["RiscoFogo"]}</p>', unsafe_allow_html=True)
+        with col2:
+            st.markdown(f'<p class="metric-container">FRP: {dados_municipio["FRP"]}</p>', unsafe_allow_html=True)
 
-            # Ajuste para evitar erro no gráfico
-            df_metrica = pd.DataFrame({
-                "Métrica": ["FRP", "Risco de Fogo"],
-                "Valor": [dados_municipio["FRP"], dados_municipio["RiscoFogo"]]
-            })
+        # Ajuste para evitar erro no gráfico
+        df_metrica = pd.DataFrame({
+            "Métrica": ["FRP", "Risco de Fogo"],
+            "Valor": [dados_municipio["FRP"], dados_municipio["RiscoFogo"]]
+        })
 
-            # Cria um gráfico de barras com as cores específicas
-            fig_metrica = px.bar(
-                df_metrica,
-                x="Métrica",
-                y="Valor",
-                title="FRP e Risco de Fogo",
-                text="Valor",
-                color="Métrica",
-                color_discrete_map={"FRP": "#ba4ce7", "Risco de Fogo": "#fc5c5c"}
-            )
+        # Cores verde escuro e verde claro
+        cores_metrica = {"FRP": "#3fd170", "Risco de Fogo": "#223f18"}
 
-            # Melhorias no layout do gráfico
-            fig_metrica.update_traces(textposition="outside")
-            fig_metrica.update_layout(
-                plot_bgcolor="white",
-                paper_bgcolor="white",
-                font=dict(color="#023616"),
-                title=dict(font=dict(color="#023616")),
-                xaxis=dict(
-                    title=dict(text="Métrica", font=dict(color="#023616")),
-                    tickfont=dict(color="#023616")
-                ),
-                yaxis=dict(
-                    title=dict(text="Valor", font=dict(color="#023616")),
-                    tickfont=dict(color="#023616")
-                ),
-                legend=dict(font=dict(color="#023616"))
-            )
+        # Cria um gráfico de barras com as cores ajustadas
+        fig_metrica = px.bar(
+            df_metrica,
+            x="Métrica",
+            y="Valor",
+            title="FRP e Risco de Fogo",
+            text="Valor",
+            color="Métrica",
+            color_discrete_map=cores_metrica
+        )
 
-            # Exibe o gráfico na interface
-            st.plotly_chart(fig_metrica, use_container_width=True)
+        # Melhorias no layout do gráfico
+        fig_metrica.update_traces(textposition="outside")
+        fig_metrica.update_layout(
+            plot_bgcolor="white",
+            paper_bgcolor="white",
+            font=dict(color="#023616"),
+            title=dict(font=dict(color="#023616")),
+            xaxis=dict(
+                title=dict(text="Métrica", font=dict(color="#023616")),
+                tickfont=dict(color="#023616")
+            ),
+            yaxis=dict(
+                title=dict(text="Valor", font=dict(color="#023616")),
+                tickfont=dict(color="#023616")
+            ),
+            legend=dict(font=dict(color="#023616"))
+        )
 
+        # Exibe o gráfico na interface
+        st.plotly_chart(fig_metrica, use_container_width=True)
