@@ -20,10 +20,10 @@ O design do site foi desenvolvido com o objetivo de ser intuitivo e de fácil na
 
 ## Estrutura do Site
 
-O sistema é composto por três seções principais, que foram projetadas para oferecer uma experiência intuitiva e informativa:
+O sistema é composto por duas seções principais, que foram projetadas para oferecer uma experiência intuitiva e informativa:
 
 ### 1. **Página Inicial (Home)**  
-A página inicial apresenta o propósito do site, explicando de forma breve e clara os motivos que levaram à sua criação. Ela é um ponto de entrada acolhedor e informativo, que guia os usuários para explorar as outras seções do site.
+Na página inicial são exibidos gráficos e mapas interativos que mostram as estatísticas mais recentes sobre queimadas e desmatamento na Amazônia Legal. As ferramentas visuais foram escolhidas para proporcionar um impacto maior e ajudar os usuários a compreenderem a gravidade da situação.
 
 ### 2. **Aba de Dados**  
 Nesta seção, são exibidos gráficos e mapas interativos que mostram as estatísticas mais recentes sobre queimadas e desmatamento na Amazônia Legal. As ferramentas visuais foram escolhidas para proporcionar um impacto maior e ajudar os usuários a compreenderem a gravidade da situação.
@@ -44,4 +44,4 @@ Essa funcionalidade tem como objetivo fomentar o engajamento do público e colet
 
 ## Conclusão
 
-O protótipo do **A+zônia** reflete uma iniciativa voltada para a educação e conscientização ambiental, com foco na preservação da Amazônia Legal. A estrutura modular e bem definida do site permite que informações cruciais sejam apresentadas de maneira impactante, ao mesmo tempo que oferece um espaço para a interação e participação ativa dos usuários.
+O protótipo do **Datazônia** reflete uma iniciativa voltada para a educação e conscientização ambiental, com foco na preservação da Amazônia Legal. A estrutura modular e bem definida do site permite que informações cruciais sejam apresentadas de maneira impactante, ao mesmo tempo que oferece um espaço para a interação e participação ativa dos usuários.
