@@ -40,7 +40,7 @@ cd portal-web/app
 ```
 4. Agora, para executar o projeto, execute o seguinte comando:
 ```bash
-streamlit run web.py
+make run
 ```
 5. 🖱️ Acesso ao serviço:
    

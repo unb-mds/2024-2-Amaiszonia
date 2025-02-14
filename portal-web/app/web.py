@@ -47,6 +47,7 @@ st.markdown(
         color: #023616 !important;
         font-weight: bold;
         font-size: 20px;
+        
     }
     </style>
     """,
@@ -316,7 +317,7 @@ else:
     # --- Gráfico: Emissão de CO2 ---
     dadosCO2 = load_data("emissaoCO2.csv")
     st.markdown("<h2 class='section-title'>Emissão de CO2</h2>", unsafe_allow_html=True)
-    st.write("Comparativo entre os índices de emissão de CO2 na Amazônia Legal e no restante do Brasil.")
+    st.markdown("<h5 style='text-align: center; '>Comparativo entre os índices de emissão de CO2 na Amazônia Legal e no restante do Brasil.</h5>", unsafe_allow_html=True)
     st.plotly_chart(criar_grafico(dadosCO2, "Ano", ["Amazonia Legal", "Resto do Brasil"], "Emissão de CO2", cores=["#0009de", "#87e7f7"]))
 
     st.markdown("<hr>", unsafe_allow_html=True)
@@ -324,7 +325,7 @@ else:
     # --- Gráfico: Foco de Queimadas ---
     dadosFOCO = load_data("foco_queimadas.csv")
     st.markdown("<h2 class='section-title'>Foco de Queimadas</h2>", unsafe_allow_html=True)
-    st.write("Comparativo entre os índices de foco de queimadas na Amazônia Legal e no restante do Brasil.")
+    st.markdown("<h5 style='text-align: center; '>Comparativo entre os índices de foco de queimadas na Amazônia Legal e no restante do Brasil.</h5>", unsafe_allow_html=True)
     st.plotly_chart(criar_grafico(dadosFOCO, "Ano", ["Amazonia Legal", "Resto do Brasil"], "Foco de Queimadas", tipo="line", cores=["#ff7300", "#f7e45f"]))
 
     st.markdown("<hr>", unsafe_allow_html=True)
@@ -332,7 +333,7 @@ else:
     # --- Gráfico: Desmatamento Acumulado ---
     dadosDAM = load_data("desmatamento_acumulado.csv")
     st.markdown("<h2 class='section-title'>Desmatamento Acumulado</h2>", unsafe_allow_html=True)
-    st.write("Comparativo entre os índices de desmatamento acumulado na Amazônia Legal e no restante do Brasil.")
+    st.markdown("<h5 style='text-align: center; '>Comparativo entre os índices de desmatamento acumulado na Amazônia Legal e no restante do Brasil.</h5>", unsafe_allow_html=True)
     st.plotly_chart(criar_grafico(dadosDAM, "Ano", ["Amazonia Legal", "Resto do Brasil"], "Desmatamento Acumulado", cores=["#3fd170", "#223f18"]))
 
     st.markdown("<hr>", unsafe_allow_html=True)
@@ -341,7 +342,7 @@ else:
     st.markdown("<h2 class='section-title'>FRP e Risco de Fogo</h2>", unsafe_allow_html=True)
     st.markdown(
         """
-        <p>
+        <p style='text-align: center; '>
             <strong>Fire Radiative Power (FRP):</strong> Mede a energia térmica emitida por um incêndio em megawatts (MW).<br>
             <strong>Risco de Fogo:</strong> Índice que estima a probabilidade de incêndios com base em variáveis ambientais.
         </p>
