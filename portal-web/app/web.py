@@ -348,7 +348,6 @@ else:
     dadosFRP = load_data('dados_filtrados.csv')
 
     # Cabeçalhos de informações
-    st.markdown('## Fire Radiative Power e Risco Fogo')
     st.markdown('## FRP e Risco Fogo')
     st.markdown("""
     ### Fire Radiative Power (FRP)
