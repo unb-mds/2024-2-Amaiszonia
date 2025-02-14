@@ -25,20 +25,13 @@ O sistema é composto por duas seções principais, que foram projetadas para of
 ### 1. **Página Inicial (Home)**  
 Na página inicial são exibidos gráficos e mapas interativos que mostram as estatísticas mais recentes sobre queimadas e desmatamento na Amazônia Legal. As ferramentas visuais foram escolhidas para proporcionar um impacto maior e ajudar os usuários a compreenderem a gravidade da situação.
 
-### 2. **Aba de Dados**  
-Nesta seção, são exibidos gráficos e mapas interativos que mostram as estatísticas mais recentes sobre queimadas e desmatamento na Amazônia Legal. As ferramentas visuais foram escolhidas para proporcionar um impacto maior e ajudar os usuários a compreenderem a gravidade da situação.
+### 2. **Aba Sobre nós**  
+Nesta seção, é possivel de se encontrar informações sobre os participantes do projeto, link que irá te direcionar para o nosso repositório no github e outro link que irá te levar a nossa documentação onde será possivel se entender o processo de crianção da plataforma.
 
 - **Gráficos**: Informações detalhadas sobre áreas afetadas ao longo do tempo.  
-- **Mapas Interativos**: Visualização geográfica das regiões com maior índice de desmatamento e queimadas.  
+- **Mapas Interativos**: Visualização geográfica das regiões da aréa que a Amazonia Legal abrange.  
 
-### 3. **Aba de Sugestões**  
-Aqui, os usuários podem contribuir com suas opiniões, ideias ou experiências relacionadas ao tema do site. Um formulário simples permite que eles preencham:  
 
-- Nome  
-- E-mail  
-- Mensagem  
-
-Essa funcionalidade tem como objetivo fomentar o engajamento do público e coletar sugestões úteis para o projeto.
 
 ---
 
