@@ -323,7 +323,7 @@ else:
     
     st.markdown("<h2 class='section-title'>Emissão de CO2</h2>", unsafe_allow_html=True)
     st.markdown("<h5 style='text-align: center; '>Comparativo entre os índices de emissão de CO2 na Amazônia Legal e no restante do Brasil.</h5>", unsafe_allow_html=True)
-    st.plotly_chart(criar_grafico(dadosCO2, "Ano", ["Amazonia Legal", "Resto do Brasil"], "Emissão de CO2", cores=["#0009de", "#87e7f7"]))
+    st.plotly_chart(criar_grafico(dadosCO2, "Ano", ["Amazonia Legal", "Resto do Brasil"], "Emissão de CO2, em toneladas por habitante (tCO2/hab)", cores=["#0009de", "#87e7f7"]))
 
     st.markdown("<hr>", unsafe_allow_html=True)
 
@@ -339,7 +339,7 @@ else:
     dadosDAM = load_data("desmatamento_acumulado.csv")
     st.markdown("<h2 class='section-title'>Desmatamento Acumulado</h2>", unsafe_allow_html=True)
     st.markdown("<h5 style='text-align: center; '>Comparativo entre os índices de desmatamento acumulado na Amazônia Legal e no restante do Brasil.</h5>", unsafe_allow_html=True)
-    st.plotly_chart(criar_grafico(dadosDAM, "Ano", ["Amazonia Legal", "Resto do Brasil"], "Desmatamento Acumulado", cores=["#3fd170", "#223f18"]))
+    st.plotly_chart(criar_grafico(dadosDAM, "Ano", ["Amazonia Legal", "Resto do Brasil"], "Desmatamento Acumulado por km²", cores=["#3fd170", "#223f18"]))
 
     st.markdown("<hr>", unsafe_allow_html=True)
 
