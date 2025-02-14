@@ -20,28 +20,21 @@ O design do site foi desenvolvido com o objetivo de ser intuitivo e de fácil na
 
 ## Estrutura do Site
 
-O sistema é composto por três seções principais, que foram projetadas para oferecer uma experiência intuitiva e informativa:
+O sistema é composto por duas seções principais, que foram projetadas para oferecer uma experiência intuitiva e informativa:
 
 ### 1. **Página Inicial (Home)**  
-A página inicial apresenta o propósito do site, explicando de forma breve e clara os motivos que levaram à sua criação. Ela é um ponto de entrada acolhedor e informativo, que guia os usuários para explorar as outras seções do site.
+Na página inicial são exibidos gráficos e mapas interativos que mostram as estatísticas mais recentes sobre queimadas e desmatamento na Amazônia Legal. As ferramentas visuais foram escolhidas para proporcionar um impacto maior e ajudar os usuários a compreenderem a gravidade da situação.
 
-### 2. **Aba de Dados**  
-Nesta seção, são exibidos gráficos e mapas interativos que mostram as estatísticas mais recentes sobre queimadas e desmatamento na Amazônia Legal. As ferramentas visuais foram escolhidas para proporcionar um impacto maior e ajudar os usuários a compreenderem a gravidade da situação.
+### 2. **Aba Sobre nós**  
+Nesta seção, é possivel de se encontrar informações sobre os participantes do projeto, link que irá te direcionar para o nosso repositório no github e outro link que irá te levar a nossa documentação onde será possivel se entender o processo de crianção da plataforma.
 
 - **Gráficos**: Informações detalhadas sobre áreas afetadas ao longo do tempo.  
-- **Mapas Interativos**: Visualização geográfica das regiões com maior índice de desmatamento e queimadas.  
+- **Mapas Interativos**: Visualização geográfica das regiões da aréa que a Amazonia Legal abrange.  
 
-### 3. **Aba de Sugestões**  
-Aqui, os usuários podem contribuir com suas opiniões, ideias ou experiências relacionadas ao tema do site. Um formulário simples permite que eles preencham:  
 
-- Nome  
-- E-mail  
-- Mensagem  
-
-Essa funcionalidade tem como objetivo fomentar o engajamento do público e coletar sugestões úteis para o projeto.
 
 ---
 
 ## Conclusão
 
-O protótipo do **A+zônia** reflete uma iniciativa voltada para a educação e conscientização ambiental, com foco na preservação da Amazônia Legal. A estrutura modular e bem definida do site permite que informações cruciais sejam apresentadas de maneira impactante, ao mesmo tempo que oferece um espaço para a interação e participação ativa dos usuários.
+O protótipo do **Datazônia** reflete uma iniciativa voltada para a educação e conscientização ambiental, com foco na preservação da Amazônia Legal. A estrutura modular e bem definida do site permite que informações cruciais sejam apresentadas de maneira impactante, ao mesmo tempo que oferece um espaço para a interação e participação ativa dos usuários.
