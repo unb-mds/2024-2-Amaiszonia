@@ -4,7 +4,7 @@ Ele realiza operações de criação de tabelas e inserção de dados no banco.
 """
 import os
 import sqlite3
-#import pandas as pd
+import pandas as pd
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_PATH = os.path.join(BASE_DIR, '../data/')
@@ -52,7 +52,7 @@ CREATE TABLE IF NOT EXISTS filtrados_data (
 # dadosCO2 = pd.read_csv(os.path.join(DATA_PATH, 'emissaoCO2.csv'))
 # dadosFOCO = pd.read_csv(os.path.join(DATA_PATH, 'foco_queimadas.csv'))
 # dadosDAM = pd.read_csv(os.path.join(DATA_PATH, 'desmatamento_acumulado.csv'))
-# dadosFILT = pd.read_csv(os.path.join(DATA_PATH, 'dados_filtrados.csv'))
+dadosFILT = pd.read_csv(os.path.join(DATA_PATH, 'dados_filtrados.csv'))
 
 # for _, row in dadosCO2.iterrows():
 #     cursor.execute('''
@@ -72,12 +72,12 @@ CREATE TABLE IF NOT EXISTS filtrados_data (
 #     VALUES (?, ?, ?)
 #     ''', (row['Ano'], row['Brasil'], row['Amazonia Legal']))
 
-# for _, row in dadosFILT.iterrows():
-#     cursor.execute('''
-#     INSERT INTO filtrados_data(Estado, Municipio, RiscoFogo, FRP)
-#     VALUES (?, ?, ?, ?)
-#     ''', (row['Estado'], row['Municipio'], row['RiscoFogo'],row['FRP'])
-#                    )
+for _, row in dadosFILT.iterrows():
+    cursor.execute('''
+    INSERT INTO filtrados_data(Estado, Municipio, RiscoFogo, FRP)
+    VALUES (?, ?, ?, ?)
+    ''', (row['Estado'], row['Municipio'], row['RiscoFogo'],row['FRP'])
+                   )
 
 conn.commit()
 conn.close()

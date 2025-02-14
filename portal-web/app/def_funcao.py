@@ -60,7 +60,7 @@ def definir_tabela(nome_tabela):
     """Define para qual tabela os dados serão enviados."""
     global TABELA_ATUAL
     TABELA_ATUAL = nome_tabela
-    print(f"📌 Tabela definida: {TABELA_ATUAL}")
+    print(f"Tabela definida: {TABELA_ATUAL}")
 
 
 class DownloadHandler(FileSystemEventHandler):
@@ -93,7 +93,7 @@ class DownloadHandler(FileSystemEventHandler):
             self.observer.stop()  # Para a observação após a inserção dos dados
         else:
             print(
-                f"⚠ Nenhuma tabela foi definida para {file_name}, ignorando.")
+                f"Nenhuma tabela foi definida para {file_name}, ignorando.")
 
     def process_csv(self, file_path, table_name):
         """Lê o arquivo CSV e insere os dados na tabela correta."""
@@ -101,7 +101,6 @@ class DownloadHandler(FileSystemEventHandler):
         cursor = conn.cursor()
         df = pd.read_csv(file_path, sep=None, engine="python")
         df.columns = df.columns.str.strip()
-        print("Cabeçalho do CSV:", df.columns.tolist())
         if table_name == "co2":
             cursor.execute("""
                     CREATE TABLE IF NOT EXISTS co2_data (
@@ -178,6 +177,6 @@ class DownloadHandler(FileSystemEventHandler):
 
         conn.commit()
         conn.close()
-        print(f"✅ Dados inseridos na tabela {table_name} com sucesso!")
+        print(f"Dados inseridos na tabela {table_name} com sucesso!")
         time.sleep(2)
         os.remove(file_path)  # Remove o arquivo após inserção
